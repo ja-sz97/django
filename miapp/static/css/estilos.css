@@ -1,0 +1,45 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    font-family: sans-serif, Arial, Helvetica;
+    text-decoration: none;
+}
+body{
+    background-color: #f2f2f2;
+
+}
+/*
+header{
+    width: 1212px;
+    height: 140px;
+}
+
+*/
+#logotipo{
+    width: 60%;
+    height: 50px;
+    margin:0 auto;
+}
+
+#logotipo img{
+    display: block;
+    width: 50px;
+    float: left;
+}
+
+#logotipo h1{
+    display: block;
+    float: left;
+    margin-top: 25px;
+    margin-left: 20px;
+    letter-spacing: 2px;
+    font-weight: 100;
+    color: #42a096;
+}
+
+#content{
+    width: 1250px;
+    min-height: 930px;
+    margin: 0 auto;
+
+}

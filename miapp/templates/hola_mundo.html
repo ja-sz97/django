@@ -1,0 +1,22 @@
+{% extends 'layout.html' %}
+
+
+{% block title %}
+    titulo de hola mundo
+{% endblock title %}
+    
+
+{% block content %}
+
+    <div class="row mt-5">
+        <div class="col">
+            {{block.super}} <!--contenido del bloque original, herencia-->
+        </div>
+        <div class="col">
+            <h1>Hola mundo!</h1>
+
+        </div>
+    </div>
+
+{% endblock content %}
+    

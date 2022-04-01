@@ -1,0 +1,37 @@
+{% extends 'layout.html' %}
+
+{% block title %}
+    INDEX
+{% endblock  %}
+
+
+{% block content %}
+
+
+{% comment %}
+    comentario que no aparece pa inspeccionar elemento, diferente a html
+{% endcomment %}
+    
+
+<div class="row mt-5">
+    <div class="col">
+        <h1 class="text-center">Inicio</h1>
+    </div>
+    <div class="col">
+        {{mi_variable}}
+    </div>
+    
+    {% if nombre %}
+
+        <p>{{nombre}}</p>
+
+    {% else %}
+
+        <strong>nombre no existe</strong>
+
+    {% endif %}
+        
+</div>
+    <p> años hasta el 2050: </p>
+{% endblock content %}
+    
