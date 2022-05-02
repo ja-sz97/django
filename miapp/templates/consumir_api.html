@@ -1,9 +1,33 @@
 
+{% extends 'layout.html' %}
 
-<p>
-    {{dinero.nombre}}
-</p>
+{% block title %}
+    CONSUMIR APIS
+{% endblock  %}
 
-<p>
-    {{dinero.valor}}
-</p>
+
+{% block content %}
+
+
+{% comment %}
+    comentario que no aparece pa inspeccionar elemento, diferente a html
+{% endcomment %}
+
+
+<div class="row">
+    <div class="col">
+        <p>
+            {{dinero.nombre}}
+        </p>
+    </div>
+    <div class="col">
+        <p>
+            {{dinero.valor}}
+        </p>
+    </div>
+</div>
+{% endblock content %}
+    
+
+
+

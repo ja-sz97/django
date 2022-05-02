@@ -20,6 +20,11 @@
     <div class="col">
         {{mi_variable}}
     </div>
+
+    {% comment %}
+        condicionales en django
+    
+    {% endcomment %}
     
     {% if nombre %}
 
@@ -30,8 +35,73 @@
         <strong>nombre no existe</strong>
 
     {% endif %}
+
+    
+    {% comment %}
+        bucles en django
+    
+    {% endcomment %}
+
+    <ul>
+        {% for lenguaje in lenguajes %}
+            <li>
+                {{lenguaje}}
+            </li>
+        {% endfor %}
+    </ul>
         
 </div>
     <p> años hasta el 2050: </p>
+
+    <ul>
+        {% for anio in year  %}
+            <li>
+                {{anio}}
+            </li>
+        {% endfor %}
+    </ul>
+
+    <table class="table">
+        <thead>
+          <tr>
+            <th scope="col">#</th>
+            <th scope="col">Lenguaje</th>
+
+          </tr>
+        </thead>
+        
+                        
+        {% for lenguaje in lenguajes %}
+        <tbody>
+            <tr>
+                <th scope="row">{{forloop.counter}}</th>
+                <td>{{lenguaje}}
+                </td>
+            </tr>
+        </tbody>
+        {% endfor %}
+        {{cantAnios}}
+    
+    {% comment %}
+    <tbody>
+      <tr>
+        <th scope="row">1</th>
+        <td>Mark</td>
+
+      </tr>
+      <tr>
+        <th scope="row">2</th>
+        <td>Jacob</td>
+
+      </tr>
+      <tr>
+        <th scope="row">3</th>
+        <td colspan="2">Larry the Bird</td>
+      </tr>
+    </tbody>
+        
+    {% endcomment %}
+        
+    </table>
 {% endblock content %}
     

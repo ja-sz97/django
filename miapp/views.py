@@ -37,23 +37,26 @@ layout = """
 
 def index (request):
 
-    html = """
-        <h1>Inicio</h1>
-        <p> años hasta el 2050: </p>
-        <ul>
-
-    """
+    anio = []
     year = 2022
     while (year <= 2050):
         if (year % 2 == 0):
-            html += f"<li>{str(year)}</li>"
+            anio.append(year)
         year += 1
 
-    html += "</ul>"
 
     nombre = 'javier saavedra'
+    anios=len(anio)
+
+    lenguajes = ['C','C++','PYTHON','JAVA']
+    cant = len(lenguajes)
     return render(request,'index.html', {
-        'mi_variable' : 'dato en la vista'
+        'mi_variable' : 'dato en la vista',
+        'nombre': nombre,
+        'lenguajes': lenguajes,
+        'year': anio,
+        'cantidad': range(1,cant),
+        'cantAnios': anios
     })
 
 def hola_mundo(request):
