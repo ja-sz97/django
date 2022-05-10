@@ -28,16 +28,25 @@
         <nav class="mt-5">
             <ul class="nav justify-content-left bg-secondary">
                 <li class="nav-item">
-                  <a class="nav-link text-white" href="/inicio"> Inicio </a>
+                  <a class="nav-link text-white" href="{% url 'inicio' %}"> Inicio </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link text-white" href="/hola-mundo"> Hola mundo </a>
+                    <a class="nav-link text-white" href="{% url 'Hola_mundo' %}"> Hola mundo </a>
                   </li>
                 <li class="nav-item">
-                    <a class="nav-link text-white" href="/pagina-pruebas"> Pagina de pruebas </a>
+                    <a class="nav-link text-white" href="{% url 'pagina' %}"> Pagina de pruebas </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link text-white" href="/contacto"> contacto </a>
+                    <a class="nav-link text-white" href="{% url 'contacto' 'javier' 'saavedra' %}"> contacto </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-white" href="{% url 'articulos' %}"> Articulos </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-white" href="{% url 'create' %}"> Crear articulo </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-white" href="{% url 'create_full' %}"> Crear articulo2 </a>
                 </li>
               </ul>
         </nav>
@@ -75,7 +84,7 @@
         <footer class="bg-light text-center text-lg-start">
 
             <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
-                © 2022 Master en Python
+                © 2022 Master en Python - {% now "Y" %}
             </div>
         </footer>
     </div>

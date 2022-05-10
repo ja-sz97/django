@@ -1,0 +1,67 @@
+{% extends 'layout.html' %}
+
+
+{% block title %}Formularios en Django{% endblock  %}
+    
+
+
+{% block content %}
+
+<h1>Formularios en Django</h1>
+
+<form action="{%url 'save'%}" method = "POST">
+    {% csrf_token%}
+    <div class="form-row">
+        <div class="form-group col-3">
+            <label for="title">Titulo</label>
+            <input type="text" class="form-control" name ="title">
+        </div>
+    </div>
+    <div class="form-row">
+        <div class="form-group col-3 mt-3">
+            <label for="content">Contenido</label>
+            <textarea class="form-control" name ="content"></textarea>
+        </div>
+    </div>
+    {% comment %}    <div class="col-auto my-1">
+      <label class="mr-sm-2" for="inlineFormCustomSelect">Preference</label>
+      <select class="custom-select mr-sm-2" id="inlineFormCustomSelect">
+        <option selected>Choose...</option>
+        <option value="1">One</option>
+        <option value="2">Two</option>
+        <option value="3">Three</option>
+      </select>
+    </div>{% endcomment %}
+    <div class="form-row align-items-center mt-3">
+        <div class="col-auto my-1">
+            <label class="mr-sm-2" for="public">publicado</label>
+            <select class="custom-select mr-sm-2" name="public">
+              <option value="1">Si</option>
+              <option value="0">No</option>
+
+            </select>
+          </div>
+    </div>
+        <input type="submit" class="btn btn-primary mt-3" value="Guardar">
+</form>
+
+{% comment %}
+    
+<form action="{%url 'save'%}" method = "GET">
+    <label for="title">Titulo</label>
+    <input type="text" name ="title">
+
+    <label for="content">Contenido</label>
+    <textarea name ="content"></textarea>
+
+    <label for="public">Publicado?</label>
+    <select name="public">
+        <option value="1">Si</option>
+        <option value="0">No</option>
+    </select>
+
+    <input type="submit" value="Guardar">
+</form>
+{% endcomment %}
+
+{% endblock %}

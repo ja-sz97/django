@@ -1,0 +1,46 @@
+    {% extends 'layout.html' %}
+
+
+    {% block title %}Formularios en Django{% endblock  %}
+
+    {% load crispy_forms_tags %}
+
+    {% block content %}
+
+<h1>Formularios en Django</h1>
+
+{% comment %}
+
+{% if form.errors %}
+
+<div class="alert alert-danger" role="alert">
+    Error en el formulario
+</div>
+
+{% endif %}
+
+<form action="" method = "POST">
+{% csrf_token%}
+<div class="form-row">
+    <div class="form-group col-3">{{form.title|as_crispy_field}}</div>
+    <div class="form-group col-3">{{form.content|as_crispy_field}}</div>
+</div>
+<div class="form-row">
+    <div class="form-group col-3">
+        {{form.public|as_crispy_field}}
+    </div>
+</div>
+
+<input type="submit" class="btn btn-primary mt-3" value="Guardar">
+</form>
+{% endcomment %}
+
+
+<form action="{%url 'importar'%}"method="post" enctype="multipart/form-data">  
+    {% csrf_token %}  
+    <input type="file" name="xlsfile">  
+    <button type="submit">Subir</button>  
+</form>  
+
+
+    {% endblock %}

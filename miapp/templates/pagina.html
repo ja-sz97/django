@@ -10,6 +10,26 @@
 {% block content %}
 
 <h1> pagina de mi web </h1>
-<p> creado por javier saavedra </p>
+<p> {{"creado por javier saavedra"|cut:" "}} </p>
+{% comment  %}
+cut corta lo que le diga
+{% endcomment %}
 
+<p>{{texto|default:" no hay nada"}}</p>
+
+<p>
+    {{lista|join:': '}}
+</p>
+<p>
+    {{lista|length}}
+</p>
+<p>
+    {{"cuantas palabras tiene"|length}}
+</p>
+<p>
+    {{"cuantas PALABRAS tiene" |lower}}
+</p>
+<p>
+    {{"cuantas PALABRAS tiene" |wordcount}}
+</p>
 {% endblock %}
